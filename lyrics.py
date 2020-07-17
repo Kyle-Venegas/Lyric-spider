@@ -2,14 +2,6 @@ import scrapy
 from scrapy.crawler import CrawlerProcess
 import os
 
-def ask():
-    artist = input('Artist name?: ')
-    song = input('Song name?: ')
-    artist_song = artist + ' ' + song
-    full = artist_song.replace(' ', '-')
-    song_url = 'https://genius.com/' + full + '-lyrics'
-    return song_url
-
 def album_ask():
     artist = input('Artist name?: ')
     album = input('Album name?: ')
@@ -20,7 +12,6 @@ class song_Spider(scrapy.Spider):
     name = 'lyric'
 
     start_urls = [album_ask()]
-#   start_urls = [ask()]
 
     custom_settings = {
             'LOG_ENABLED' : False,
