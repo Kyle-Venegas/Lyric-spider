@@ -24,6 +24,10 @@ class lyricSpider(scrapy.Spider):
         for line in response.css('div.lyrics ::text').getall()[2:-2]:
             print(line, end='')
 
-process = CrawlerProcess()
-process.crawl(lyricSpider)
-process.start()
+def lyric():
+    process = CrawlerProcess()
+    process.crawl(lyricSpider)
+    process.start()
+
+if __init__ == '__main__':
+    lyric()
