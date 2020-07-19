@@ -23,6 +23,7 @@ class lyricSpider(scrapy.Spider):
         os.system('clear')
         for line in response.css('div.lyrics ::text').getall()[2:-2]:
             print(line, end='')
+        delay = input('')
 
 def lyric():
     process = CrawlerProcess()
