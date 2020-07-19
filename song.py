@@ -3,11 +3,10 @@ from scrapy.crawler import CrawlerProcess
 import os
 
 def ask():
-    artist = input('Artist name?: ')
-    song = input('Song name?: ')
-    artist_song = artist + ' ' + song
-    full = artist_song.replace(' ', '-')
-    url = 'https://genius.com/' + full + '-lyrics'
+    artist = (input('Artist name?: ')).replace(' ','-')
+    song = (input('Song name?: ')).replace(' ','-')
+    artist_song = artist + '-' + song
+    url = 'https://genius.com/' + artist_song + '-lyrics'
     return url
 
 class lyricSpider(scrapy.Spider):

@@ -3,9 +3,9 @@ from scrapy.crawler import CrawlerProcess
 import os
 
 def album_ask():
-    artist = input('Artist name?: ')
-    album = input('Album name?: ')
-    album_url = 'https://genius.com/albums/' + artist.replace(' ','-') + '/' + album.replace(' ','-')
+    artist = (input('Artist name?: ')).replace(' ','-')
+    album = (input('Album name?: ')).replace(' ','-')
+    album_url = 'https://genius.com/albums/' + artist + '/' + album
     return album_url
 
 class song_Spider(scrapy.Spider):
