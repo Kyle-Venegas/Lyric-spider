@@ -29,5 +29,5 @@ def lyric():
     process.crawl(lyricSpider)
     process.start()
 
-if __init__ == '__main__':
+if __name__ == '__main__':
     lyric()
