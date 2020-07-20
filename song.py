@@ -20,6 +20,9 @@ class lyricSpider(scrapy.Spider):
 
     def parse(self, response):
         os.system('clear')
+        h1 = response.css('h1::text').get()
+        h2 = response.css('h2 a::text').get()
+        print(h2, ' - ', h1, '\n')
         for line in response.css('div.lyrics ::text').getall()[2:-2]:
             print(line, end='')
         delay = input('')
