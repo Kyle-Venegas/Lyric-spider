@@ -10,9 +10,11 @@ def menu():
         if choice == '1':
             import album
             album.lyric()
+            break
         elif choice == '2':
             import song
             song.lyric()
+            break
         elif choice == '0':
             break
         else:
